@@ -1,0 +1,16 @@
+<vector android:height="24dp" android:viewportHeight="128"
+    android:viewportWidth="128" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#69b0ee" android:pathData="M64,64m-64,0a64,64 0,1 1,128 0a64,64 0,1 1,-128 0"/>
+    <path android:fillColor="#da364c" android:pathData="m74.889,26.204 l-17.124,28.386h12.064l16.799,-28.386z"/>
+    <path android:fillColor="#eeefee" android:pathData="m73.647,62.175h-19.7v-7.132a3.81,3.81 0,0 1,3.806 -3.806h12.088a3.81,3.81 0,0 1,3.806 3.806zM57.207,58.913h13.178v-3.87a0.544,0.544 0,0 0,-0.544 -0.544h-12.091a0.544,0.544 0,0 0,-0.544 0.544z"/>
+    <path android:fillColor="#eeefee" android:pathData="M34.371,58.667L93.628,58.667A3.262,3.262 0,0 1,96.89 61.929L96.89,98.534A3.262,3.262 0,0 1,93.628 101.796L34.371,101.796A3.262,3.262 0,0 1,31.109 98.534L31.109,61.929A3.262,3.262 0,0 1,34.371 58.667z"/>
+    <path android:fillColor="#dbd8dd" android:pathData="M93.878,63.95L93.878,96.513A2.175,2.175 0,0 1,91.703 98.688L36.297,98.688A2.175,2.175 0,0 1,34.122 96.513L34.122,63.95A2.175,2.175 135,0 1,36.297 61.775L91.703,61.775A2.175,2.175 0,0 1,93.878 63.95z"/>
+    <path android:fillColor="#ef5261" android:pathData="m53.703,26.204 l16.124,28.386h-12.064l-15.799,-28.386z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m66.248,67.301h23.68v1.485h-23.68z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m66.248,73.533h23.68v1.485h-23.68z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m66.248,79.764h23.68v1.485h-23.68z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m66.248,85.996h23.68v1.485h-23.68z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m38.752,92.227h51.176v1.485h-51.176z"/>
+    <path android:fillColor="#9a9eaf" android:pathData="M49.465,71.091m-5.466,0a5.466,5.466 0,1 1,10.932 0a5.466,5.466 0,1 1,-10.932 0"/>
+    <path android:fillColor="#9a9eaf" android:pathData="m49.465,75.53a10.713,10.713 0,0 1,10.713 10.714v0.8a0,0 0,0 1,0 0h-21.426a0,0 0,0 1,0 0v-0.8a10.713,10.713 0,0 1,10.713 -10.714z"/>
+</vector>

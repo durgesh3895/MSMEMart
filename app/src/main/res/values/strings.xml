@@ -1,0 +1,98 @@
+<resources>
+
+    <string name="app_name">MSME Mart</string>
+    <string name="tag_line">MSMEMart</string>
+    <string name="need_help">Need Help?</string>
+    <string name="speech_prompt">Say something&#8230;</string>
+
+
+    <string name="login_message">UP MSME Mart Login</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_password">Enter password</string>
+    <string name="forget_password">Forget password?</string>
+
+    <string name="proceed">Login</string>
+
+
+    <string-array name="up_district">
+        <item>Agra</item>
+        <item>Aligarh</item>
+        <item>Allahabad</item>
+        <item>Ambedkar Nagar</item>
+        <item>Amethi</item>
+        <item>Amroha</item>
+        <item>Auraiya</item>
+        <item>Azamgarh</item>
+        <item>Badaun</item>
+        <item>Bagpat</item>
+        <item>Bahraich</item>
+        <item>Ballia</item>
+        <item>Balrampur</item>
+        <item>Banda District</item>
+        <item>Barabanki</item>
+        <item>Bareilly</item>
+        <item>Basti</item>
+        <item>Bijnor</item>
+        <item>Bulandshahr</item>
+        <item>Chandauli</item>
+        <item>Chitrakoot</item>
+        <item>Deoria</item>
+        <item>Etah</item>
+        <item>Etawah</item>
+        <item>Faizabad</item>
+        <item>Farrukhabad</item>
+        <item>Fatehpur</item>
+        <item>Firozabad</item>
+        <item>Gautam Buddha Nagar</item>
+        <item>Ghaziabad</item>
+        <item>Ghazipur</item>
+        <item>Gonda</item>
+        <item>Gorakhpur</item>
+        <item>Hamirpur</item>
+        <item>Hapur District</item>
+        <item>Hardoi</item>
+        <item>Hathras</item>
+        <item>Jaunpur District</item>
+        <item>Jhansi</item>
+        <item>Kannauj</item>
+        <item>Kanpur Dehat</item>
+        <item>Kanpur Nagar</item>
+        <item>Kasganj</item>
+        <item>Kaushambi</item>
+        <item>Kushinagar</item>
+        <item>Lakhimpur Kheri</item>
+        <item>Lalitpur</item>
+        <item>Lucknow</item>
+        <item>Maharajganj</item>
+        <item>Mahoba</item>
+        <item>Mainpuri</item>
+        <item>Mathura</item>
+        <item>Mau</item>
+        <item>Meerut</item>
+        <item>Mirzapur</item>
+        <item>Moradabad</item>
+        <item>Muzaffarnagar</item>
+        <item>Pilibhit</item>
+        <item>Pratapgarh</item>
+        <item>PrayagRaj</item>
+        <item>Rae Bareli</item>
+        <item>Rampur</item>
+        <item>Saharanpur</item>
+        <item>Sambhal</item>
+        <item>Sant Kabir Nagar</item>
+        <item>Sant Ravidas Nagar</item>
+        <item>Shahjahanpur</item>
+        <item>Shamli</item>
+        <item>Shravasti</item>
+        <item>Siddharthnagar</item>
+        <item>Sitapur</item>
+        <item>Sonbhadra</item>
+        <item>Sultanpur</item>
+        <item>Unnao</item>
+        <item>Varanasi</item>
+
+
+    </string-array>
+
+
+</resources>

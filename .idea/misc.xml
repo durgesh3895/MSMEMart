@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable-v24/dashboard_background.xml" value="0.19" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/appbar_background.xml" value="0.168" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/approved_background.xml" value="0.124" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/button_bg.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/dashboard_background.xml" value="0.19" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/district_background.xml" value="0.19" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ic_back_arrow.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ic_close.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ic_default_user.xml" value="0.179" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ic_phone_call.xml" value="0.179" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ic_shadow.xml" value="0.1645" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/inactive_otp_box.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/pending_background.xml" value="0.19" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/profile_background.xml" value="0.19" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/rejected_background.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/ring.xml" value="0.168" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/tab_background.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/tab_background_selected.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/drawable/tab_background_unselected.xml" value="0.154" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/activate_deactivate_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/activity_camera.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/add_survey.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/add_surveyor.xml" value="0.2" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/add_unit_address_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/add_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/card_supervisor_list.xml" value="0.11302083333333333" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/card_surveyor_list.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/card_unit_list.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/card_unit_listss.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/change_password_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/custom_info_window.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/dash_board.xml" value="0.2" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/dashboard.xml" value="0.11302083333333333" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/file_paths.xml" value="0.24010416666666667" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/forget_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/image_view_dailog.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/logout_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/map_view_dailog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/surveyor.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/surveys.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/units.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/user_profile.xml" value="0.1" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/welcome.xml" value="0.4" />
+        <entry key="..\:/UPICon/GISTagging/app/src/main/res/menu/master_bottom_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_forword_arrow.xml" value="0.1605" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/iic_cart.xml" value="0.1605" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/add_surveyor.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/all_users.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_cart_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_product_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_surveyor_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_unit_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/dash_board.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/image_view_dailog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/login.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/products.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/welcome.xml" value="0.1" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1605" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/appbar_background.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/approved_background.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/bottom_btn_bg_inverted.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/button_bg.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/dialog_bg.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/ic_back_arrow.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/ic_launcher_background.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/ic_role.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/ic_search_icon.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/ic_search_white.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/inactive_otp_box.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/tab_background.xml" value="0.179" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/add_disctrict_dialog.xml" value="0.136" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/add_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/add_traing_dialog.xml" value="0.536" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/add_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/app_bar.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/appbar_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/card_district_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/card_event_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/card_training_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/card_user_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/dash_board.xml" value="0.2" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/district_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/event_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/forget_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/login.xml" value="0.136" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/trainin_listg_type.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/user_approval_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/users.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/layout/welcome.xml" value="0.1" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/menu/main_menu_delete.xml" value="0.11302083333333333" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/menu/master_bottom_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/UPCon/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.179" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/add_disctrict_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/add_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/advisors.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_district_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_event_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_event_user_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_supervisor_list.xml" value="0.264" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_trainer_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_training_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/card_user_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/dash_board.xml" value="0.4" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/data_placeholder_layout.xml" value="0.24010416666666667" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/district_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/event_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/event_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/hint_completion_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/search_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/shimmer_frame_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/shimmerlayout.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/trainees.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/trainers.xml" value="0.24010416666666667" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/trainin_listg_type.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/user_approval_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/upicon/app/src/main/res/layout/users.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

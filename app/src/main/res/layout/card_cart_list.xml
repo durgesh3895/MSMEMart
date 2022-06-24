@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/card_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:cardCornerRadius="@dimen/_5sdp"
+       android:elevation="1dp"
+       android:layout_margin="@dimen/_3sdp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/_2sdp"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/msme_white_bg"
+                android:scaleType="fitXY"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/product_name"
+                   style="@style/TextViewMediumBlack"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Product name"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:textAlignment="textStart"
+                   android:singleLine="true"
+                   android:ellipsize="middle"
+                   android:layout_margin="@dimen/_2sdp"
+                   android:textSize="@dimen/_10sdp" />
+
+               <TextView
+                   android:id="@+id/product_price"
+                   style="@style/TextViewSemiBoldBlack"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Price"
+                   android:layout_margin="@dimen/_2sdp"
+                   android:layout_marginVertical="@dimen/_2sdp"
+                   android:textAlignment="textStart"
+                   android:textSize="@dimen/_9sdp" />
+
+               <TextView
+                   android:id="@+id/product_quantity"
+                   style="@style/TextViewRegularNormal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Quantity : 1"
+                   android:layout_margin="@dimen/_2sdp"
+                   android:layout_marginVertical="@dimen/_2sdp"
+                   android:textSize="@dimen/_10sdp"
+                   android:textAlignment="textStart"/>
+
+               <TextView
+                   android:id="@+id/product_remove"
+                   style="@style/TextViewRegularNormal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Remove"
+                   android:layout_margin="@dimen/_2sdp"
+                   android:layout_marginVertical="@dimen/_2sdp"
+                   android:textSize="@dimen/_10sdp"
+                   android:textColor="@color/Red"
+                   android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+
+
+
+         </LinearLayout>
+
+
+
+      </LinearLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>
