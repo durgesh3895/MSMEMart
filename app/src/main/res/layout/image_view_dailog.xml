@@ -37,6 +37,17 @@
             android:layout_gravity="center"
             android:scaleType="fitXY"/>
 
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Image"
+            android:layout_marginVertical="@dimen/_5sdp"
+            style="@style/TextViewMediumBlack"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textAlignment="textStart"/>
+
 
     </LinearLayout>
 

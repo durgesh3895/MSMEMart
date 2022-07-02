@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.upicon.msmeapp">
+    package="com.upicon.app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,44 +22,44 @@
         android:theme="@style/Theme.UPCon"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Cart"
+            android:name=".BasicActivities.ContactUs"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.UnitList.Camera"
-            android:exported="false" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/map_key" />
-
-        <activity
-            android:name="com.upicon.msmeapp.BasicActivities.UserProfile"
+            android:name=".Product.ProductDetails"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.UnitList.AddUnit"
+            android:name=".SuperAdmin.AdminDashboard"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.UnitList.Products"
+            android:name=".Product.ProductsAdmin"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.UnitList.Cart"
-            android:exported="false" />
-
-        <activity
-            android:name="com.upicon.msmeapp.UserList.AddSurveyor"
+            android:name=".Cart.Cart"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.UserList.AllUsers"
+            android:name=".BasicActivities.UserProfile"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.Dashboards.DashBoard"
+            android:name=".Product.AddProduct"
             android:exported="false" />
         <activity
-            android:name="com.upicon.msmeapp.BasicActivities.Login"
+            android:name=".Product.Products"
+            android:exported="false" />
+        <activity
+            android:name=".UsersList.AddUser"
+            android:exported="false" />
+        <activity
+            android:name=".UsersList.AllUsers"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboards.DashBoard"
+            android:exported="false" />
+        <activity
+            android:name=".BasicActivities.Login"
             android:exported="false"
             android:noHistory="true" />
         <activity
-            android:name="com.upicon.msmeapp.BasicActivities.Welcome"
+            android:name=".BasicActivities.Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,16 +67,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-<!--        <provider-->
-<!--            android:name="androidx.core.content.FileProvider"-->
-<!--            android:authorities="com.example.android.fileprovider"-->
-<!--            android:exported="false"-->
-<!--            android:grantUriPermissions="true">-->
-<!--            <meta-data-->
-<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
-<!--                android:resource="@xml/file_paths" />-->
-<!--        </provider>-->
     </application>
 
 </manifest>

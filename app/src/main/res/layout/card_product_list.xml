@@ -11,14 +11,12 @@
    <androidx.cardview.widget.CardView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       app:cardCornerRadius="@dimen/_5sdp"
-       android:elevation="1dp"
-       android:layout_margin="@dimen/_3sdp">
+       android:elevation="@dimen/_1sdp"
+       android:layout_margin="@dimen/_2sdp">
 
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_margin="@dimen/_2sdp"
           android:layout_gravity="center"
           android:gravity="center"
           android:orientation="vertical">
@@ -30,20 +28,46 @@
              android:gravity="center"
              android:orientation="vertical">
 
+            <RelativeLayout
+                android:id="@+id/relativelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+               <ImageView
+                   android:id="@+id/product_image"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_120sdp"
+                   android:src="@drawable/msme_white_bg"
+                   android:scaleType="fitXY"/>
+
+               <ImageView
+                   android:id="@+id/iv_wishlist"
+                   style="@style/TextViewSemiBoldBlack"
+                   android:layout_width="@dimen/_20sdp"
+                   android:layout_height="@dimen/_20sdp"
+                   android:layout_alignTop="@id/product_image"
+                   android:layout_alignEnd="@id/product_image"
+                   android:layout_marginStart="@dimen/_5sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginEnd="@dimen/_5sdp"
+                   android:layout_marginBottom="@dimen/_5sdp"
+                   android:src="@drawable/ic_fav_inactive"
+                   android:text="Category name"
+                   android:textColor="@color/Black"
+                   android:visibility="gone"
+                   android:textSize="@dimen/_10sdp" />
+
+            </RelativeLayout>
 
 
-            <ImageView
-                android:id="@+id/product_image"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
-                android:src="@drawable/msme_white_bg"
-                android:scaleType="fitXY"/>
+
+
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#e3f2fd"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
                 android:orientation="vertical">
 
                <TextView
@@ -61,14 +85,13 @@
 
                <TextView
                    android:id="@+id/product_price"
-                   style="@style/TextViewSemiBoldBlack"
+                   style="@style/TextViewMediumBlack"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:text="Price"
                    android:layout_margin="@dimen/_2sdp"
                    android:layout_marginVertical="@dimen/_2sdp"
                    android:textAlignment="textStart"
-                   android:drawableEnd="@drawable/iic_cart"
                    android:textSize="@dimen/_9sdp" />
 
             </LinearLayout>

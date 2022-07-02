@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".BasicActivities.ContactUs">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:fitsSystemWindows="true"
+        style="@style/TitleBarTextAppearance"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            style="@style/TitleBarTextAppearance"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@color/colorPrimary"
+                style="@style/TitleBarTextAppearance"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/enquiry_card"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_enquiry"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/enquiry"
+                            style="@style/TextViewRegularNormal" />
+
+
+                        <TextView
+                            android:id="@+id/txt_enquiry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mail"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:ellipsize="middle"
+                            style="@style/TextViewRegularBlack"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/techsupport_card"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/ic_support" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/tech_support"
+                            style="@style/TextViewRegularNormal" />
+
+                        <TextView
+                            android:id="@+id/txt_support"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/support"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            style="@style/TextViewRegularBlack"
+                            android:ellipsize="middle"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/call_card"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_phone_call"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/call_us"
+                            style="@style/TextViewRegularNormal"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_call"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_number"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            style="@style/TextViewRegularBlack"
+                            />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/whatapp_card"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_whatsapp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/whatsapp"
+                            android:layout_marginTop="10dp"
+                            style="@style/TextViewRegularNormal" />
+
+
+                        <TextView
+                            android:id="@+id/txt_whatsapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/contact_number"
+                            style="@style/TextViewRegularBlack"
+                            />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/address_card"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/ic_address"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/address"
+                        style="@style/TextViewRegularNormal"/>
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/store_address1"
+                        style="@style/TextViewRegularBlack"/>
+
+                    <TextView
+                        android:id="@+id/txt_address2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/store_address2"
+                        style="@style/TextViewRegularBlack"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fab"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:backgroundTint="@color/White"
+        android:src="@mipmap/ic_app_icon"
+        app:srcCompat="@mipmap/ic_app_icon_round"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
