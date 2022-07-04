@@ -9,6 +9,7 @@
     <string name="login_message">UP MSME Mart Login</string>
     <string name="enter_mobile_number">Enter mobile number</string>
     <string name="enter_password">Enter password</string>
+    <string name="enter_c_password">Confirm password</string>
     <string name="forget_password">Forget password?</string>
 
     <string name="enquiry">Enquiry</string>

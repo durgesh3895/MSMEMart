@@ -51,8 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:background="@color/colorAccent"
-        android:visibility="invisible"
         android:orientation="horizontal"
+        android:visibility="invisible"
         android:tint="@color/colorAccent">
 
         <LinearLayout
@@ -84,20 +84,23 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_place_order"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Order"
+                android:text="Place order"
                 android:textAllCaps="false"
                 android:layout_gravity="end"
-                android:background="@color/pending_color"/>
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/approved_background"/>
 
 
         </LinearLayout>

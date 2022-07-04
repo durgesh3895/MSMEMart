@@ -94,10 +94,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 validateLogin();
                 break;
             case R.id.txt_forget_password:
-//                Intent intent=new Intent(getApplicationContext(),ForgetPassword.class);
-//                intent.putExtra("flag","login");
-//                intent.putExtra("mobile","");
-//                startActivity(intent);
+                Intent intent2=new Intent(getApplicationContext(),ContactUs.class);
+                startActivity(intent2);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
             case R.id.txt_new_account:

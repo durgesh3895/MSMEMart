@@ -49,6 +49,7 @@
         <entry key="..\:/UPICon/GISTagging/app/src/main/res/layout/welcome.xml" value="0.4" />
         <entry key="..\:/UPICon/GISTagging/app/src/main/res/menu/master_bottom_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/appbar_background.xml" value="0.13" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/approved_background.xml" value="0.207" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/bottom_btn_bg_inverted.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.206" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_enquiry.xml" value="0.13" />
@@ -89,6 +90,7 @@
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/image_view_dailog.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/login.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/map_view_dailog.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/place_order_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/product_details.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/products.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/products_admin.xml" value="0.25416666666666665" />

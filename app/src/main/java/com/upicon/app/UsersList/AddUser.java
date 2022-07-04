@@ -41,7 +41,7 @@ public class AddUser extends AppCompatActivity implements  android.view.View.OnF
     HashMap<String, String> user;
     AutoCompleteTextView auto_district;
     ArrayAdapter<String> districtAdapter = null;
-    EditText et_first_name,et_last_name,et_mobile_number,et_address;
+    EditText et_first_name,et_last_name,et_mobile_number,et_password,et_c_password,et_address;
     Button add_surveyor;
 
     @Override
@@ -62,6 +62,8 @@ public class AddUser extends AppCompatActivity implements  android.view.View.OnF
         et_first_name=findViewById(R.id.et_first_name);
         et_last_name=findViewById(R.id.et_last_name);
         et_mobile_number=findViewById(R.id.et_mobile_number);
+        et_password=findViewById(R.id.et_password);
+        et_c_password=findViewById(R.id.et_c_password);
         et_address=findViewById(R.id.et_address);
         auto_district=findViewById(R.id.auto_district);
 
@@ -138,6 +140,18 @@ public class AddUser extends AppCompatActivity implements  android.view.View.OnF
         else if (et_mobile_number.getText().toString().length()<10){
             UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter 10 digit mobile number");
         }
+        else if (et_password.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter password");
+        }
+        else if (et_password.getText().toString().length()<5){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Password required minimum 5 digits");
+        }
+        else if (et_c_password.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter confirm password");
+        }
+        else if (!et_c_password.getText().toString().equals(et_password.getText().toString())){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Confirm password should be same as password");
+        }
         else if (auto_district.getText().toString().isEmpty()){
             UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Select district");
         }
@@ -193,6 +207,7 @@ public class AddUser extends AppCompatActivity implements  android.view.View.OnF
                 params.put("first_name",et_first_name.getText().toString());
                 params.put("last_name",et_last_name.getText().toString());
                 params.put("mobile",et_mobile_number.getText().toString());
+                params.put("password",et_password.getText().toString());
                 params.put("district",auto_district.getText().toString());
                 params.put("address",et_address.getText().toString());
                 params.put("role","User");

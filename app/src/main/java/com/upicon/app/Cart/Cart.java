@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -36,6 +38,8 @@ import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 import com.upicon.app.AppController.BaseURL;
 import com.upicon.app.AppController.SessionManager;
+import com.upicon.app.BasicActivities.UserProfile;
+import com.upicon.app.Dashboards.DashBoard;
 import com.upicon.app.Model.Product;
 import com.upicon.app.R;
 import com.upicon.app.UtilsMethod.UtilsMethod;
@@ -57,7 +61,7 @@ public class Cart extends AppCompatActivity {
     private CartAdapter cartAdapter;
 
     ShimmerFrameLayout shimmerFrameLayout;
-    LinearLayout ll_cart_layout;
+    LinearLayout ll_cart_layout,ll_place_order;
     TextView tv_count,tv_price;
 
     @Override
@@ -80,6 +84,8 @@ public class Cart extends AppCompatActivity {
         shimmerFrameLayout = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
         shimmerFrameLayout.startShimmer();
         ll_cart_layout = (LinearLayout) findViewById(R.id.ll_cart);
+        ll_place_order = (LinearLayout) findViewById(R.id.ll_place_order);
+
         tv_count = (TextView) findViewById(R.id.tv_count);
         tv_price = (TextView) findViewById(R.id.tv_price);
 
@@ -122,9 +128,17 @@ public class Cart extends AppCompatActivity {
 
     private void clickListener() {
 
+        ll_place_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowPopup();
+            }
+        });
 
 
     }
+
+
 
     private void refresh() {
         SwipeRefreshLayout swipeLayout=(SwipeRefreshLayout)findViewById(R.id.swipe_refresh_layout) ;
@@ -410,4 +424,85 @@ public class Cart extends AppCompatActivity {
 
 
     }
+
+
+
+    private void ShowPopup() {
+        Dialog dialog=new Dialog(Cart.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.place_order_dialog);
+        dialog.show();
+        Window window=dialog.getWindow();
+        window.setBackgroundDrawableResource(R.drawable.dialog_bg);
+        window.setLayout(700, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        Button btn_cancel=(Button)dialog.findViewById(R.id.btn_cancel);
+        Button btn_yes=(Button)dialog.findViewById(R.id.btn_yes);
+
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        btn_yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PlaceOrder();
+
+            }
+        });
+    }
+
+    private void PlaceOrder() {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.PLACE_ORDER,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.e("response",response);
+                        try {
+                            JSONObject jsonObject=new JSONObject(response);
+                            if(jsonObject.get("Response").equals(true)){
+                                UtilsMethod.INSTANCE.successToast(getApplicationContext(),jsonObject.getString("Message"));
+                                startActivity(new Intent(Cart.this,DashBoard.class));
+                                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                            }
+                            else if (jsonObject.get("Response").equals(false)){
+                                UtilsMethod.INSTANCE.errorToast(getApplicationContext(),jsonObject.getString("Message"));
+                            }
+                            else {
+                                UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Something went wrong");
+                            }
+
+                        }
+                        catch (JSONException e) { e.printStackTrace(); }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("error",error.toString());
+                    }
+                })
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Authorization", user.get(SessionManager.KEY_MOBILE));
+                return headers;
+            }
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("user_id", user.get(SessionManager.KEY_ID));
+                params.put("token",BaseURL.TOKEN);
+                return params;
+            }
+        };
+        postRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        queue.add(postRequest);
+    }
+
 }

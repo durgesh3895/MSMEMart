@@ -33,6 +33,7 @@ import android.net.NetworkInfo;
      public static final String ADD_TO_WISHLIST= BASE_FOLDER+ "AddToWishlist.php";
      public static final String GET_WISHLIST= BASE_FOLDER+ "GetWishlist.php";
      public static final String REMOVE_WISHLIST= BASE_FOLDER+ "RemoveWishlist.php";
+     public static final String PLACE_ORDER= BASE_FOLDER+ "PlaceOrder.php";
 
 
     public static boolean isOnline(Context applicationContext) {

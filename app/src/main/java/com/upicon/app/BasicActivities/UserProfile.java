@@ -105,7 +105,7 @@ public class UserProfile extends AppCompatActivity {
         txt_user_name.setText(user.get(SessionManager.KEY_FIRST_NAME)+" "+user.get(SessionManager.KEY_LAST_NAME));
         txt_user_fullname.setText(user.get(SessionManager.KEY_FIRST_NAME)+" "+user.get(SessionManager.KEY_LAST_NAME));
         txt_user_role.setText(user.get(SessionManager.KEY_ROLE));
-        txt_user_role.setText("User");
+        //txt_user_role.setText("User");
 
         txt_user_mobile.setText(user.get(SessionManager.KEY_MOBILE));
         txt_user_district.setText(user.get(SessionManager.KEY_DISTRICT));
