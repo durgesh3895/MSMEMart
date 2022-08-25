@@ -13,15 +13,16 @@
     <string name="forget_password">Forget password?</string>
 
     <string name="enquiry">Enquiry</string>
-    <string name="mail">rijo.mathew@upicon.in</string>
+    <string name="mail">upmsmemart@gmail.com</string>
     <string name="tech_support">Tech Support</string>
-    <string name="support">rijo.mathew@upicon.in</string>
+    <string name="support">upmsmemart@gmail.com</string>
     <string name="call_us">Call Us</string>
     <string name="whatsapp">WhatsApp</string>
     <string name="contact_number">6390005459</string>
     <string name="address">Address</string>
-    <string name="store_address1">7th Floor, Summit Building, Gomti Nagar</string>
-    <string name="store_address2">Lucknow, Uttar Pradesh 226001</string>
+    <string name="store_address1">7th Floor, Rohtas Summit Building </string>
+    <string name="store_address2">Vibhuti Khand, Gomti Nagar</string>
+    <string name="store_address3">Lucknow, Uttar Pradesh 226010</string>
 
     <string name="proceed">Login</string>
 

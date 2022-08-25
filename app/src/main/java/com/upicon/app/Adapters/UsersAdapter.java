@@ -48,8 +48,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MyViewHolder
         holder.user_name.setText(users.getFirst_name()+" "+ users.getLast_name());
         holder.user_contact.setText(users.getMobile());
         holder.user_address.setText(users.getAddress());
-
-
         holder.user_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

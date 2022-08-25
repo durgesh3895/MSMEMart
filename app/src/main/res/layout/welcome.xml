@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".BasicActivities.Welcome">
 
     <LinearLayout
@@ -15,21 +16,21 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_150sdp"
-            android:src="@drawable/up_msme_logo"
-            android:layout_gravity="center" />
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/up_msme_mart_png"/>
 
 
         <TextView
             android:id="@+id/welcome_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextViewMediumBlack"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/tag_line"
+            android:textColor="@color/app_name_color"
+            android:text="@string/app_name"
+            style="@style/TextViewSemiBoldBlack"
             android:textSize="@dimen/_14sdp"
-            android:visibility="gone"
+            android:layout_marginTop="@dimen/_15sdp"
             android:textAlignment="center"/>
 
 
@@ -48,14 +49,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            style="@style/TextViewMediumBlack"
-            android:textSize="@dimen/_10sdp"
+            style="@style/TextViewRegularNormal"
+            android:textSize="@dimen/_8sdp"
             android:text="Powered by"/>
 
-        <ImageView
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/upicon_logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            style="@style/TextViewMediumBlack"
+            android:textSize="@dimen/_10sdp"
+            android:text="UFS Digital Limited"/>
 
 
     </LinearLayout>

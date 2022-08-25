@@ -9,8 +9,6 @@ import androidx.core.content.ContextCompat;
 public class UtilsPermissions {
     Activity context;
     private final String[] REQUIRED_PERMISSIONS = new String[] {
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            "android.permission.READ_EXTERNAL_STORAGE",
             "android.permission.INTERNET"
     };
     private final int REQUEST_CODE_PERMISSIONS = 101;

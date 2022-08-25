@@ -52,15 +52,25 @@
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/approved_background.xml" value="0.207" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/bottom_btn_bg_inverted.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.206" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_delete.xml" value="0.1335" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_enquiry.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_fav_active.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_fav_inactive.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_forword_arrow.xml" value="0.1605" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_progress_bar_webview.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_role.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_search_icon.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_search_white.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_shadow.xml" value="0.1705" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_support.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/ic_whatsapp.xml" value="0.13" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/iic_cart.xml" value="0.1605" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/tab_background.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/tab_background_selected.xml" value="0.1705" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/drawable/tab_background_unselected.xml" value="0.1705" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/activate_deactivate_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/activity_camera.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/activity_webview.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/add_disctrict_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/add_product.xml" value="0.21944444444444444" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/add_survey.xml" value="0.25416666666666665" />
@@ -68,7 +78,7 @@
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/admin_dashboard.xml" value="0.2" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/all_users.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/app_bar.xml" value="0.25416666666666665" />
-        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/app_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/app_user.xml" value="0.176" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/appbar_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_cart_list.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/card_category_list.xml" value="0.25416666666666665" />
@@ -82,7 +92,9 @@
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/cart.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/change_password_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/contact_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/create_account.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/dash_board.xml" value="0.176" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/fragment_category.xml" value="0.22592592592592592" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/fragment_favorite.xml" value="0.2542991141219385" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/fragment_offer.xml" value="0.21944444444444444" />
@@ -97,7 +109,7 @@
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/slider_images_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/slider_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/user_profile.xml" value="0.25416666666666665" />
-        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/welcome.xml" value="0.1" />
+        <entry key="..\:/UPICon/MSMEMart/app/src/main/res/layout/welcome.xml" value="0.2" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/menu/master_bottom_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/UPICon/MSMEMart/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1605" />
         <entry key="..\:/UPICon/UPCon/app/src/main/res/drawable/appbar_background.xml" value="0.179" />

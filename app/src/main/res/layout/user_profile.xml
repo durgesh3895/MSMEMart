@@ -91,250 +91,279 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp">
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:elevation="@dimen/_2sdp">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/_5sdp"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/txt_edit_profile"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Profile Details"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        style="@style/TextViewMediumBlack" />
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/light_gray"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Profile Details"
+                                    style="@style/TextViewSemiBoldNormal"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                                <TextView
+                                    android:id="@+id/txt_edit_profile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:text="Edit profile"
+                                    style="@style/TextViewSemiBoldNormal"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_emp_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/ic_default_small_product"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name"
+                                    android:textSize="@dimen/_8sdp"
+                                    style="@style/TextViewMediumNormal"/>
+
+
+                                <TextView
+                                    android:id="@+id/txt_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name"
+                                    android:textSize="@dimen/_10sdp"
+                                    style="@style/TextViewMediumBlack"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_emp_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/ic_default_small_product"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mobile"
+                                    android:textSize="@dimen/_8sdp"
+                                    style="@style/TextViewMediumNormal"/>
+
+
+                                <TextView
+                                    android:id="@+id/txt_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0123456789"
+                                    android:textSize="@dimen/_10sdp"
+                                    style="@style/TextViewMediumBlack"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_emp_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/ic_default_small_product"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email"
+                                    android:textSize="@dimen/_8sdp"
+                                    style="@style/TextViewMediumNormal"/>
+
+
+                                <TextView
+                                    android:id="@+id/txt_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="username@gmail.com"
+                                    android:textSize="@dimen/_10sdp"
+                                    style="@style/TextViewMediumBlack"/>
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_emp_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/ic_default_small_product"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textSize="@dimen/_8sdp"
+                                    style="@style/TextViewMediumNormal"/>
+
+
+                                <TextView
+                                    android:id="@+id/txt_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textSize="@dimen/_10sdp"
+                                    style="@style/TextViewMediumBlack"/>
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
 
                     <View
-                        android:layout_width="@dimen/_60sdp"
-                        android:layout_height="2dp"
-                        android:background="@color/colorPrimary"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/light_gray"/>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_5sdp"
-                        android:orientation="vertical">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_3sdp"
-                            app:cardCornerRadius="@dimen/_3sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    app:srcCompat="@drawable/ic_default_userss"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"/>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="@dimen/_10sdp"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/txt_user_fullname"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="User full name"
-                                        style="@style/TextViewRegularBlack"/>
-
-
-
-                                </LinearLayout>
-
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_3sdp"
-                            app:cardCornerRadius="@dimen/_3sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    app:srcCompat="@drawable/ic_role"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"/>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="@dimen/_10sdp"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/txt_user_role"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="User role"
-                                        style="@style/TextViewRegularBlack"/>
-
-
-
-                                </LinearLayout>
-
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_3sdp"
-                            app:cardCornerRadius="@dimen/_3sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    app:srcCompat="@drawable/ic_phone_call"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"/>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="@dimen/_10sdp"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/txt_user_mobile"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Mobile number"
-                                        style="@style/TextViewRegularBlack"/>
-
-
-
-                                </LinearLayout>
-
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_3sdp"
-                            app:cardCornerRadius="@dimen/_3sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    app:srcCompat="@drawable/ic_district"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"/>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="@dimen/_10sdp"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/txt_user_district"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="District"
-                                        style="@style/TextViewRegularBlack"/>
-
-
-
-                                </LinearLayout>
-
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_3sdp"
-                            app:cardCornerRadius="@dimen/_3sdp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    app:srcCompat="@drawable/ic_address"
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"/>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="@dimen/_10sdp"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/txt_user_address"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Address"
-                                        style="@style/TextViewRegularBlack"/>
-
-
-
-                                </LinearLayout>
-
-
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_weight="1"
                             android:orientation="horizontal">
 
                             <TextView
@@ -342,7 +371,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Change password"
-                                android:textAlignment="textEnd"
                                 style="@style/TextViewMediumBlack"
                                 android:textSize="@dimen/_10sdp"
                                 android:textColor="@color/Red"/>
@@ -352,10 +380,9 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_20sdp"
-                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_weight="1"
                             android:orientation="horizontal">
 
                             <TextView
@@ -363,9 +390,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Logout"
-                                android:textAlignment="center"
-                                style="@style/TextViewSemiBoldNormal"
-                                android:textSize="@dimen/_12sdp"
+                                style="@style/TextViewMediumBlack"
+                                android:textSize="@dimen/_10sdp"
+                                android:textAlignment="textEnd"
                                 android:textColor="@color/Red"/>
 
 
@@ -375,9 +402,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
 
 
 

@@ -81,11 +81,11 @@ public class UserFragment extends androidx.fragment.app.Fragment {
 
 
 
-        user_name.setText(user.get(SessionManager.KEY_FIRST_NAME)+" "+user.get(SessionManager.KEY_LAST_NAME));
+        user_name.setText(user.get(SessionManager.KEY_NAME));
         user_role.setText(user.get(SessionManager.KEY_MOBILE));
 
 
-        if (Objects.equals(user.get(SessionManager.KEY_ROLE), "Admin")){
+        if (Objects.equals(user.get(SessionManager.KEY_ROLE), "Super Admin")||Objects.equals(user.get(SessionManager.KEY_ROLE), "Admin")){
             super_admin_card.setVisibility(View.VISIBLE);
         }
         else {

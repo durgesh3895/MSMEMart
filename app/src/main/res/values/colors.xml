@@ -9,6 +9,7 @@
     <color name="dc6">#e3f2fd</color>
 
     <color name="dc7">#F0F8FF</color>
+    <color name="app_name_color">#e13a07</color>
 
     <color name="intro_bg1">#3C8CCB</color>
     <color name="intro_bg2">#FFA500</color>
@@ -19,6 +20,7 @@
     <color name="colorPrimaryDark">#05A85C</color>
     <color name="colorAccent">#359640</color>
     <color name="colorAccent2">#a2e950</color>
+    <color name="light_gray">#FAF9FF</color>
 
     <color name="total_color">#3c8dbc</color>
     <color name="approved_color">#3CB371</color>

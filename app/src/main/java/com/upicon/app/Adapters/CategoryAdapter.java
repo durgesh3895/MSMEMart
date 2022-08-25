@@ -3,6 +3,7 @@ package com.upicon.app.Adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
         holder.tv_category.setText(category.getC_name());
         Picasso.get().load(BaseURL.IMAGE_PATH_CATEGORY+ category.getC_image()).placeholder(R.drawable.up_msme_logo_gray_bg).into(holder.iv_category);
+
+        Log.e("category",BaseURL.IMAGE_PATH_CATEGORY+ category.getC_image());
 
         holder.iv_category.setOnClickListener(new View.OnClickListener() {
             @Override

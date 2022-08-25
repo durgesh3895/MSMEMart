@@ -45,10 +45,12 @@ import com.upicon.app.UtilsMethod.ImageUtils;
 import com.upicon.app.UtilsMethod.UtilsMethod;
 import com.upicon.app.UtilsMethod.UtilsPermissions;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,17 +58,15 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
 
     SessionManager sessionManager;
     HashMap<String, String> user;
-    AutoCompleteTextView auto_district;
-    ArrayAdapter<String> districtAdapter = null;
-    EditText et_unit_name,et_owner_name,et_mobile_number,et_latitude,et_longitude,et_address;
-    TextView tv_latLng;
-    ImageView unit_image;
-    Button add_surveyor;
-    private UtilsPermissions utilsPermissions;
 
-    String encoded;
-    Intent intent;
-    String imagePath,imagePathMap;
+    AutoCompleteTextView auto_category;
+    ArrayAdapter<String> categoryAdapter = null;
+    ArrayList<String> category_name;
+    EditText et_product_name,et_product_price,et_product_quantity,et_product_desc;
+    ImageView product_image;
+    Button btn_add_product;
+    UtilsPermissions utilsPermissions;
+    String imagePath="";
 
 
     @Override
@@ -81,6 +81,7 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
 
         initialization();
         toolBar();
+        getCategoryList();
         clickListener();
         closeKeyBoard();
 
@@ -92,43 +93,29 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
         sessionManager = new SessionManager(getApplicationContext());
         user = sessionManager.getUserDetails();
 
-        intent=getIntent();
-        imagePath=intent.getStringExtra("imagePath");
-        imagePathMap=intent.getStringExtra("imagePathMap");
+        auto_category=findViewById(R.id.auto_category);
+        et_product_name=findViewById(R.id.et_product_name);
+        et_product_price=findViewById(R.id.et_product_price);
+        et_product_quantity=findViewById(R.id.et_product_quantity);
+        et_product_desc=findViewById(R.id.et_product_desc);
+        product_image=findViewById(R.id.product_image);
+        btn_add_product=findViewById(R.id.btn_add_product);
 
-
-        et_unit_name=findViewById(R.id.et_unit_name);
-        et_owner_name=findViewById(R.id.et_owner_name);
-        et_mobile_number=findViewById(R.id.et_mobile_number);
-        et_address=findViewById(R.id.et_address);
-        et_latitude=findViewById(R.id.et_latitude);
-        et_longitude=findViewById(R.id.et_longitude);
-        tv_latLng=findViewById(R.id.tv_lat_lng);
-        auto_district=findViewById(R.id.auto_district);
-        unit_image=findViewById(R.id.unit_image);
-
-        et_latitude.setEnabled(false);
-        et_longitude.setEnabled(false);
-
-
-        add_surveyor=findViewById(R.id.add_surveyor);
-
-        et_mobile_number.setOnFocusChangeListener(this);
-
-        auto_district.setKeyListener(null);
-        districtAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.hint_completion_layout, R.id.tvHintCompletion, getResources().getStringArray(R.array.up_district));
-        auto_district.setAdapter(districtAdapter);
-        auto_district.setOnTouchListener(new View.OnTouchListener() {
+        category_name = new ArrayList<>();
+        auto_category.setKeyListener(null);
+        categoryAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.hint_completion_layout, R.id.tvHintCompletion, category_name);
+        auto_category.setAdapter(categoryAdapter);
+        auto_category.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                auto_district.showDropDown();
+                auto_category.showDropDown();
                 return false;
             }
         });
 
 
-        unit_image.setOnClickListener(new View.OnClickListener() {
+        product_image.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View view) {
@@ -138,42 +125,12 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
         });
 
 
-        if (!imagePath.equals("")){
-
-            Bitmap bitmap = ImageUtils.getInstant().getCompressedBitmap(imagePath);
-            Bitmap bitmap2 = ImageUtils.getInstant().getCompressedBitmap(imagePathMap);
-            //unit_image.setImageBitmap(bitmap);
-            //encoded=imageToString(bitmap);
-
-
-            SharedPreferences prefs = getSharedPreferences("MySP", MODE_PRIVATE);
-            String address = prefs.getString("address", "");
-            String latitude = prefs.getString("latitude", "");
-            String longitude = prefs.getString("longitude", "");
-
-            et_address.setText(address);
-            et_latitude.setText(latitude);
-            et_longitude.setText(longitude);
-
-            tv_latLng.setText("LatLng : "+latitude+" , "+longitude);
-
-
-            Bitmap mergedImages = createSingleImageFromMultipleImages(bitmap, bitmap2);
-
-            unit_image.setImageBitmap(mergedImages);
-            encoded=imageToString(mergedImages);
-
-
-        }
-
-
-
     }
 
 
     private void toolBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Add Survey");
+        toolbar.setTitle("Add new product");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_back_arrow);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -210,7 +167,7 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
 
     private void clickListener() {
 
-        add_surveyor.setOnClickListener(new View.OnClickListener() {
+        btn_add_product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validateForm();
@@ -219,53 +176,41 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
     }
 
     private void validateForm() {
-        if (imagePath.isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Select image please");
+         if (auto_category.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Select category");
         }
-        else if (et_unit_name.getText().toString().isEmpty()){
+        else if (et_product_name.getText().toString().isEmpty()){
             UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter product name");
         }
-        else if (et_unit_name.getText().toString().length()<5){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Unit name is too short");
+        else if (et_product_price.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter product price");
         }
-        else if (et_owner_name.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter owner name");
+        else if (et_product_price.getText().toString().equals("0")){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter valid product price");
         }
-        else if (et_mobile_number.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter contact number");
+        else if (et_product_quantity.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter product quantity");
         }
-        else if (et_mobile_number.getText().toString().length()<10){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter 10 digit contact number");
+        else if (et_product_quantity.getText().toString().equals("0")){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter valid product quantity");
         }
-        else if (auto_district.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Select district");
-        }
-        else if (et_address.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter address");
-        }
-        else if (et_latitude.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter latitude");
-        }
-        else if (et_longitude.getText().toString().isEmpty()){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter longitude");
-        }
-        else if (et_address.getText().toString().length()<10){
-            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter full address");
+        else if (et_product_desc.getText().toString().isEmpty()){
+            UtilsMethod.INSTANCE.errorToast(getApplicationContext(),"Enter product description");
         }
         else{
-            addUnit();
+            addProduct();
 
         }
     }
 
-    private void addUnit() {
+    private void addProduct() {
 
         ProgressDialog pd=new ProgressDialog(AddProduct.this);
         pd.setMessage("Adding please wait.....");
         pd.setCancelable(false);
         pd.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.ADD_UNIT,
+        StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.ADD_PRODUCT,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -294,14 +239,12 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("user_id",user.get(SessionManager.KEY_ID));
-                params.put("unit_name",et_unit_name.getText().toString());
-                params.put("unit_owner_name",et_owner_name.getText().toString());
-                params.put("unit_contact",et_mobile_number.getText().toString());
-                params.put("unit_district",auto_district.getText().toString());
-                params.put("unit_latitude",et_latitude.getText().toString());
-                params.put("unit_longitude",et_longitude.getText().toString());
-                params.put("unit_address",et_address.getText().toString());
-                params.put("unit_image",encoded);
+                params.put("product_category",auto_category.getText().toString());
+                params.put("product_name",et_product_name.getText().toString());
+                params.put("product_price",et_product_price.getText().toString());
+                params.put("product_quantity",et_product_quantity.getText().toString());
+                params.put("product_desc",et_product_desc.getText().toString());
+                params.put("product_image",imagePath);
                 params.put("token",BaseURL.TOKEN);
                 return params;
             }
@@ -315,11 +258,12 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
         try {
             JSONObject obj = new JSONObject(response);
             if(obj.get("Response").equals(true)){
+//                UtilsMethod.INSTANCE.successToast(AddProduct.this,obj.getString("Message"));
+//                Intent intent=new Intent(getApplicationContext(), DashBoard.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                startActivity(intent);
                 UtilsMethod.INSTANCE.successToast(AddProduct.this,obj.getString("Message"));
-                Intent intent=new Intent(getApplicationContext(), DashBoard.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
@@ -335,19 +279,6 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
         catch (JSONException e) { e.printStackTrace(); }
     }
 
-    public String imageToString(Bitmap bitmap){
-        ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,80,outputStream);
-        byte[] imageBytes=outputStream.toByteArray();
-        return encodeToString(imageBytes, Base64.DEFAULT);
-    }
-
-    public static Bitmap rotateImage(Bitmap source, float angle) {
-        Matrix matrix = new Matrix();
-        matrix.postRotate(angle);
-        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
-    }
-
     @Override
     public void onFocusChange(android.view.View view, boolean b) {
         if (!b){
@@ -358,24 +289,60 @@ public class AddProduct extends AppCompatActivity implements android.view.View.O
     private void closeKeyBoard(){
         View view = this.getCurrentFocus();
         if (view != null){
-            InputMethodManager imm = (InputMethodManager)
-                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 
-    private Bitmap createSingleImageFromMultipleImages(Bitmap firstImage, Bitmap secondImage) {
+    private void getCategoryList() {
 
-        Bitmap b = Bitmap.createScaledBitmap(secondImage, firstImage.getWidth(), secondImage.getHeight(), false);
-        //Bitmap result = Bitmap.createBitmap(firstImage.getWidth() + secondImage.getWidth(), firstImage.getHeight(), firstImage.getConfig());
-        Bitmap result = Bitmap.createBitmap(firstImage.getWidth(), firstImage.getHeight()+secondImage.getHeight(), firstImage.getConfig());
-        Canvas canvas = new Canvas(result);
-        canvas.drawBitmap(firstImage, 0f, 0f, null);
-        canvas.drawBitmap(b, 0f, firstImage.getHeight(), null);
+        RequestQueue queue = Volley.newRequestQueue(AddProduct.this);
+        StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.CATEGORY_LIST,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.e("response",response);
+                        try {
+                            JSONObject obj = new JSONObject(response);
+                            if (obj.get("Response").equals(true)) {
 
-        return result;
+                                JSONArray jsonArray = new JSONArray(obj.getString("Data"));
+
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    final JSONObject e = jsonArray.getJSONObject(i);
+                                    category_name.add(e.getString("c_name"));
+                                }
+                            }
+
+                        }
+
+                        catch (JSONException e) { e.printStackTrace(); }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("error",error.toString());
+                    }
+                })
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Authorization", user.get(SessionManager.KEY_MOBILE));
+                return headers;
+            }
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("user_id", user.get(SessionManager.KEY_ID));
+                params.put("limit","100");
+                params.put("token",BaseURL.TOKEN);
+                return params;
+            }
+        };
+        postRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        queue.add(postRequest);
     }
-
-
 
 }

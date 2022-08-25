@@ -16,15 +16,14 @@ public class SessionManager {
     private Editor editor;
     private Context context;
 
-    private static final String PREF_NAME = "UPICon";
+    private static final String PREF_NAME = "MSMEMAART";
     private static final String IS_LOGIN = "IsLoggedIn";
     private static final String SESSION = "email";
 
     public static final String KEY_ID = "id";
-    public static final String KEY_FIRST_NAME = "first_name";
-    public static final String KEY_LAST_NAME = "last_name";
+    public static final String KEY_NAME = "name";
     public static final String KEY_MOBILE = "mobile";
-    public static final String KEY_DISTRICT = "district";
+    public static final String KEY_EMAIL = "email";
     public static final String KEY_ADDRESS = "address";
     public static final String KEY_ROLE = "role";
 
@@ -45,13 +44,12 @@ public class SessionManager {
     }
 
 
-    public void CreateLoginSession(String id, String first_name,String last_name, String mobile, String district,String address,String role){
+    public void CreateLoginSession(String id, String name, String mobile, String email,String address,String role){
         editor.putBoolean(IS_LOGIN, true);
         editor.putString(KEY_ID, id);
-        editor.putString(KEY_FIRST_NAME, first_name);
-        editor.putString(KEY_LAST_NAME, last_name);
+        editor.putString(KEY_NAME, name);
         editor.putString(KEY_MOBILE, mobile);
-        editor.putString(KEY_DISTRICT, district);
+        editor.putString(KEY_EMAIL, email);
         editor.putString(KEY_ADDRESS, address);
         editor.putString(KEY_ROLE, role);
         editor.commit();
@@ -63,10 +61,9 @@ public class SessionManager {
         HashMap<String, String> user = new HashMap<String, String>();
         user.put(SESSION, pref.getString(SESSION, null));
         user.put(KEY_ID, pref.getString(KEY_ID, null));
-        user.put(KEY_FIRST_NAME, pref.getString(KEY_FIRST_NAME, null));
-        user.put(KEY_LAST_NAME, pref.getString(KEY_LAST_NAME, null));
+        user.put(KEY_NAME, pref.getString(KEY_NAME, null));
         user.put(KEY_MOBILE, pref.getString(KEY_MOBILE, null));
-        user.put(KEY_DISTRICT, pref.getString(KEY_DISTRICT, null));
+        user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
         user.put(KEY_ADDRESS, pref.getString(KEY_ADDRESS, null));
         user.put(KEY_ROLE, pref.getString(KEY_ROLE, null));
         return user;

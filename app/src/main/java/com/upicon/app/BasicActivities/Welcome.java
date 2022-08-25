@@ -55,7 +55,11 @@ public class Welcome extends AppCompatActivity {
             public void run() {
 
                 if(BaseURL.isOnline(getApplicationContext())){
-                    StartActivity();
+                    //StartActivity();
+                    Intent intent=new Intent(getApplicationContext(), Webview.class);
+                    startActivity(intent);
+                    finish();
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 }
                 else{
                     UtilsMethod.INSTANCE.errorToast(Welcome.this,"Please turn on data connection");

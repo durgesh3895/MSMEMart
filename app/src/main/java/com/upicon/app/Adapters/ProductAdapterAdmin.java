@@ -46,10 +46,6 @@ public class ProductAdapterAdmin extends RecyclerView.Adapter<ProductAdapterAdmi
     private List<Product> FilteredList;
     private Context context;
 
-    SessionManager sessionManager;
-    HashMap<String, String> user;
-
-
     public ProductAdapterAdmin(Context context, List<Product> OriginalList) {
         this.context = context;
         this.OriginalList = OriginalList;
@@ -73,7 +69,6 @@ public class ProductAdapterAdmin extends RecyclerView.Adapter<ProductAdapterAdmi
         holder.product_price.setText("Rs: \u20B9 "+product.getProduct_price());
         holder.product_quantity.setText("Quantity: " +product.getProduct_quantity());
         Picasso.get().load(BaseURL.IMAGE_PATH+ product.getProduct_image()).placeholder(R.drawable.up_msme_logo_gray_bg).into(holder.product_image);
-
 
 
         holder.product_image.setOnClickListener(new View.OnClickListener() {
@@ -107,20 +102,8 @@ public class ProductAdapterAdmin extends RecyclerView.Adapter<ProductAdapterAdmi
             }
         });
 
-        holder.product_price.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //UtilsMethod.INSTANCE.successToast(context,"Item added into cart");
-                addToCart(product.getId());
-            }
-        });
-
-
-
 
     }
-
-
 
     @Override
     public int getItemCount() {
@@ -187,72 +170,6 @@ public class ProductAdapterAdmin extends RecyclerView.Adapter<ProductAdapterAdmi
         }
     }
 
-
-    private void addToCart(String id) {
-        sessionManager = new SessionManager(context);
-        user = sessionManager.getUserDetails();
-
-        ProgressDialog pd=new ProgressDialog(context);
-        pd.setMessage("Adding please wait.....");
-        pd.setCancelable(false);
-        pd.show();
-
-        RequestQueue queue = Volley.newRequestQueue(context);
-        StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.ADD_TO_CART,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.e("dc_response",response);
-                        pd.dismiss();
-                        try {
-                            JSONObject jsonObject=new JSONObject(response);
-
-                            if(jsonObject.get("Response").equals(true)){
-
-                                UtilsMethod.INSTANCE.successToast(context,jsonObject.getString("Message"));
-                            }
-                            else if(jsonObject.get("Response").equals(false)){
-
-                                UtilsMethod.INSTANCE.infoToast(context,jsonObject.getString("Message"));
-                            }
-                            else {
-                                UtilsMethod.INSTANCE.successToast(context,"Something went wrong");
-
-                            }
-
-                        }
-                        catch (JSONException e) { e.printStackTrace(); }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        pd.dismiss();
-                        Log.e("dc_error",error.toString());
-
-                    }
-                }
-        ) {
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                //headers.put("Content-Type", "application/json");
-                headers.put("Authorization", user.get(SessionManager.KEY_MOBILE));
-                return headers;
-            }
-            @SuppressLint("HardwareIds")
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("user_id",user.get(SessionManager.KEY_ID));
-                params.put("product_id", id);
-                params.put("token", BaseURL.TOKEN);
-                return params;
-            }
-        };
-        postRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        queue.add(postRequest);
-    }
 
 
 }

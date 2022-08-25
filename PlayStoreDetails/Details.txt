@@ -1,0 +1,4 @@
+App name- Daylogs
+Package name- com.upicon.daylogs
+Password - P@55word
+Alisa- key0

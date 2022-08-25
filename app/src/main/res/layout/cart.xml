@@ -50,10 +50,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:background="@color/colorAccent"
+        android:background="@color/approved_color"
         android:orientation="horizontal"
         android:visibility="invisible"
-        android:tint="@color/colorAccent">
+        android:tint="@color/approved_color">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -87,7 +87,8 @@
             android:id="@+id/ll_place_order"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:orientation="vertical">

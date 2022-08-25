@@ -25,7 +25,7 @@ import com.upicon.app.AppController.BaseURL;
 import com.upicon.app.AppController.SessionManager;
 import com.upicon.app.Dashboards.DashBoard;
 import com.upicon.app.R;
-import com.upicon.app.UsersList.AddUser;
+import com.upicon.app.UsersList.CreateAccount;
 import com.upicon.app.UtilsMethod.UtilsMethod;
 
 import org.json.JSONArray;
@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 break;
             case R.id.txt_new_account:
-                Intent intent=new Intent(getApplicationContext(), AddUser.class);
+                Intent intent=new Intent(getApplicationContext(), CreateAccount.class);
                 intent.putExtra("flag","login");
                 intent.putExtra("mobile","");
                 startActivity(intent);
@@ -185,7 +185,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
             if (obj.getString("status").equals("1")) {
 
-                sessionManager.CreateLoginSession(obj.getString("id"), obj.getString("first_name"), obj.getString("last_name"), obj.getString("mobile"), obj.getString("district"), obj.getString("address"), obj.getString("role"));
+                sessionManager.CreateLoginSession(obj.getString("id"), obj.getString("name"), obj.getString("mobile"), obj.getString("email"), obj.getString("address"), obj.getString("role"));
 
                 Intent intent = new Intent(this, DashBoard.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

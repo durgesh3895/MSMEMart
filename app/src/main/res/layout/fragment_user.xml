@@ -51,8 +51,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   app:layout_anchor="@id/dashboard"
-                  android:layout_marginStart="20dp"
-                  android:layout_marginEnd="20dp"
+                  android:layout_marginHorizontal="@dimen/_10sdp"
                   app:cardCornerRadius="@dimen/_5sdp"
                   app:layout_anchorGravity="bottom|center">
 
@@ -117,12 +116,11 @@
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_50sdp"
-                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_7sdp"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
@@ -153,7 +151,7 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Super admin dashboard"
+                                android:text="Admin Dashboard"
                                 android:layout_weight="1"
                                 style="@style/TextViewRegularNormal"
                                 android:drawableEnd="@drawable/ic_arrow_forward"/>

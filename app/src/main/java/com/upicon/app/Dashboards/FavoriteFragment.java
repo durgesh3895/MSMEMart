@@ -133,7 +133,6 @@ public class FavoriteFragment extends androidx.fragment.app.Fragment {
     }
 
     private void getWishList() {
-
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         StringRequest postRequest = new StringRequest(Request.Method.POST, BaseURL.GET_WISHLIST,
                 new Response.Listener<String>() {
@@ -278,9 +277,6 @@ public class FavoriteFragment extends androidx.fragment.app.Fragment {
 
 
         private void removeFromWishlist(String id) {
-            sessionManager = new SessionManager(context);
-            user = sessionManager.getUserDetails();
-
             ProgressDialog pd=new ProgressDialog(context);
             pd.setMessage("Removing please wait.....");
             pd.setCancelable(false);
@@ -299,8 +295,8 @@ public class FavoriteFragment extends androidx.fragment.app.Fragment {
                                 if(jsonObject.get("Response").equals(true)){
 
                                     UtilsMethod.INSTANCE.successToast(context,jsonObject.getString("Message"));
+                                    recyclerView();
                                     getWishList();
-                                    wishListAdapter.notifyDataSetChanged();
                                 }
                                 else if(jsonObject.get("Response").equals(false)){
 

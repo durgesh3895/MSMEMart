@@ -180,7 +180,7 @@ public class AllUsers extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), AddUser.class);
+                Intent intent=new Intent(getApplicationContext(), CreateAccount.class);
                 //intent.putExtra("user_role",user_role);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);

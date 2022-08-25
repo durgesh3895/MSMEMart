@@ -45,7 +45,7 @@ public class UserProfile extends AppCompatActivity {
     SessionManager sessionManager;
     HashMap<String, String> user;
     Toolbar toolbar;
-    TextView txt_edit_profile,txt_user_name,txt_user_fullname,txt_user_role,txt_user_mobile,txt_user_district,txt_user_address,txt_change_password,txt_logout;
+    TextView txt_edit_profile,txt_user_name,txt_name,txt_mobile,txt_email,txt_address,txt_change_password,txt_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,32 +92,20 @@ public class UserProfile extends AppCompatActivity {
 
         txt_edit_profile=findViewById(R.id.txt_edit_profile);
         txt_user_name =findViewById(R.id.txt_user_name);
-        txt_user_fullname=findViewById(R.id.txt_user_fullname);
-        txt_user_role=findViewById(R.id.txt_user_role);
-        txt_user_mobile=findViewById(R.id.txt_user_mobile);
-        txt_user_district=findViewById(R.id.txt_user_district);
-        txt_user_address=findViewById(R.id.txt_user_address);
+        txt_name=findViewById(R.id.txt_name);
+        txt_mobile=findViewById(R.id.txt_mobile);
+        txt_address=findViewById(R.id.txt_address);
+        txt_email=findViewById(R.id.txt_email);
 
         txt_change_password=findViewById(R.id.txt_change_password);
         txt_logout=findViewById(R.id.txt_logout);
 
 
-        txt_user_name.setText(user.get(SessionManager.KEY_FIRST_NAME)+" "+user.get(SessionManager.KEY_LAST_NAME));
-        txt_user_fullname.setText(user.get(SessionManager.KEY_FIRST_NAME)+" "+user.get(SessionManager.KEY_LAST_NAME));
-        txt_user_role.setText(user.get(SessionManager.KEY_ROLE));
-        //txt_user_role.setText("User");
-
-        txt_user_mobile.setText(user.get(SessionManager.KEY_MOBILE));
-        txt_user_district.setText(user.get(SessionManager.KEY_DISTRICT));
-        txt_user_address.setText(user.get(SessionManager.KEY_ADDRESS));
-
-
-
-
-
-
-
-
+        txt_user_name.setText(user.get(SessionManager.KEY_NAME));
+        txt_name.setText(user.get(SessionManager.KEY_NAME));
+        txt_mobile.setText(user.get(SessionManager.KEY_MOBILE));
+        txt_email.setText(user.get(SessionManager.KEY_EMAIL));
+        txt_address.setText(user.get(SessionManager.KEY_ADDRESS));
 
     }
 
@@ -157,9 +145,6 @@ public class UserProfile extends AppCompatActivity {
                 LogoutPopUp();
             }
         });
-
-
-
     }
 
     private void LogoutPopUp() {
